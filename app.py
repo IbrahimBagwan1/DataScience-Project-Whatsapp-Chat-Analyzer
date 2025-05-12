@@ -2,6 +2,7 @@ import streamlit as st
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib import rcParams
 
 # Page configuration
 st.set_page_config(page_title="WhatsApp Chat Analyzer", layout="wide")
@@ -118,6 +119,7 @@ if uploaded_file is not None:
                 plt.xticks(rotation='vertical')
                 st.pyplot(fig)
             with col2:
+                new_df.columns = ['Name', 'Percentage (%)']
                 st.dataframe(new_df)
 
         st.markdown("## 🌥️ WordCloud")
@@ -133,12 +135,17 @@ if uploaded_file is not None:
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
 
+        plt.rcParams['font.family'] = 'Segoe UI Emoji'  
         st.markdown("## 😄 Emoji Analysis")
         emoji_df = helper.emoji_helper(selected_user, df)
+
         col1, col2 = st.columns(2)
+
         with col1:
+            emoji_df.columns = ['Emoji', 'Count']
             st.dataframe(emoji_df)
+
         with col2:
             fig, ax = plt.subplots()
-            ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
+            ax.pie(emoji_df['Count'].head(), labels=emoji_df['Emoji'].head(), autopct="%0.2f")
             st.pyplot(fig)
