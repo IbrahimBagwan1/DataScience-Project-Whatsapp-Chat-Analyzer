@@ -1,7 +1,7 @@
-[![GitHub stars](https://img.shields.io/github/stars/YourUser/whatsapp-chat-sentiment-analysis?style=social)]
+[![GitHub stars](https://img.shields.io/github/stars/IbrahimBagwan1/whatsapp-chat-sentiment-analysis?style=social)]
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)]
-[![Build Status](https://github.com/YourUser/whatsapp-chat-sentiment-analysis/actions/workflows/ci.yml/badge.svg)]
+[![Build Status](https://github.com/IbrahimBagwan1/whatsapp-chat-sentiment-analysis/actions/workflows/ci.yml/badge.svg)]
 
 # 📊 DataScience-Project-Whatsapp-Chat-Analyzer
 
